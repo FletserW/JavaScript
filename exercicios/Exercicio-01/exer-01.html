@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+<style>
+    body {
+        background: rgb(70, 142, 236);
+        font: normal 15pt Arial;
+    }
+    header {
+        color: white;
+        text-align: center;
+    }
+    section {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 500px;
+        margin: auto;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+    }
+
+    div {
+        text-align: center;
+        padding: 8px;
+    }
+
+    footer {
+        color: white;
+        text-align: center;
+        font-style: italic;
+    }
+</style>
+<script>
+    function carregar() {
+        var msg = window.document.getElementById('msg')
+        var img = window.document.getElementById('imagem')
+        var data = new Date()
+        //var hora = data.getHours()
+        hora = 
+        msg.innerHTML = `Agora são ${hora} horas.`
+        if(hora >= 0 && hora < 12){
+            img.src = 'manha.png'
+            window.document.body.style.background = '#dfcb91'
+        }else if(hora >= 12 && hora <= 18){
+            img.src = 'tarde.png'
+            document.body.style.background = '#8095b0'
+        }else{
+            img.src = 'noite.png'
+            document.body.style.background = '#031f3d'
+        }
+
+    }
+</script>
+<body onload="carregar()">
+
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div id="msg">Aqui aparecerar a Hora</div>
+        <div id="foto">
+            <img src="manha.png" id="imagem" alt="foto da Hora">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Curso em video</p>
+    </footer>
+</body>
+</html>
