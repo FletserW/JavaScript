@@ -2,15 +2,15 @@ function contar(){
         var ini = window.document.getElementById('inicio')
         var fim = window.document.getElementById('fim')
         var passo = window.document.getElementById('passo')
-        var res = window.document.getSelection('div#res')
+        var res = window.document.getElementById('res')
 
         if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length ==0) {
             window.alert('[ERRO] Faltam dados!')
         } else {
             res.innerHTML = 'Contando: <br>'
-            let i = number(ini.value)
-            let f = number(fim.value)
-            let p = number(passo.value)
+            let i = parseInt(ini.value)
+            let f = parseInt(fim.value)
+            let p = parseInt(passo.value)
             if (p <=0) {
                 window.alert('Passo invalido! Considerando passo 1')
                 p = 1
@@ -26,7 +26,7 @@ function contar(){
                     res.innerHTML += ` ${c} \u{1F449}`
                 }
             }
-
+            res.innerHTML += ` \u{1F3C1}`
         }
 
     }
