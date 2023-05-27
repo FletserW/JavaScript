@@ -24,35 +24,37 @@
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
     }
 
-    div {
-        text-align: center;
-        padding: 8px;
-    }
-
     footer {
         color: white;
         text-align: center;
         font-style: italic;
     }
 </style>
-<script>
-    
-</script>
 <body>
 
     <header>
-        <h1>Titulo</h1>
+        <h1>Vamos contar</h1>
     </header>
     <section>
-        <div>
-            ...
+        <div id="dados">
+            <p><label for="inicio">Inicio:</label>
+            <input type="number" name="inicio" id="inicio">
+            </p>
+            <p><label for="fim">Fim:</label>
+                <input type="number" name="fim" id="fim">
+            </p>
+            <p><label for="passo">Passo:</label>
+                <input type="number" name="passo" id="passo">
+            </p>
+            <input type="button" value="Contar" onclick="contar()">
         </div>
-        <div>
-            ...
+        <div id="res">
+            Preparando a contagem...
         </div>
     </section>
     <footer>
         <p>&copy; Curso em video</p>
     </footer>
+    <script src="script-04.js"></script>
 </body>
 </html>
