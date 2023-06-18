@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<style>
+    body {
+        background: rgb(70, 142, 236);
+        font: normal 15pt Arial;
+    }
+    header {
+        color: white;
+        text-align: center;
+    }
+    section {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 500px;
+        margin: auto;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+    }
+
+    div {
+        text-align: center;
+        padding: 8px;
+    }
+
+    footer {
+        color: white;
+        text-align: center;
+        font-style: italic;
+    }
+</style>
+<script>
+    function tabuada(){
+        let num = document.getElementById('txtn');
+        let tab = document.getElementById('seltab');
+
+        if (num.value.length == 0) {
+            window.alert('Por favor, digite um número!');
+        } else {
+            let n = Number(num.value);
+            tab.innerHTML = '';
+
+            for (let cont = 1; cont <= 10; cont++){
+                let item = document.createElement('option');
+                item.text = `${n} x ${cont} = ${n * cont}`;
+                item.value = `tab${cont}`;
+                tab.appendChild(item);
+            }
+        }
+    }
+</script>
+<body>
+
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <p>Número: <input type="number" name="num" id="txtn"><input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
+        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um número acima</option>
+            </select>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Curso em vídeo</p>
+    </footer>
+</body>
+</html>
